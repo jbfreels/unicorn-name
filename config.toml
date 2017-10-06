@@ -1,0 +1,19 @@
+baseurl = "https://itsmejb.xyz/unicorn-name/"
+title = "Unicorn Name"
+theme = "jb-nix"
+languageCode = "en-us"
+
+[menu]
+
+[params]
+  custom_js = ['js/unicorn.js']
+  GithubID = "jbfreels"
+  TwitterID = "jbfreels"
+  FacebookID = "jbfreels"
+  Name = "Unicorn Name"
+  HeaderUsername = "unicorn-name"
+  HeaderHostname = "jbfreels.com"
+  Email = "jbfreels@me.com"
+  About = "Enter your name and hit 'Submit'"
+  ProfilePicture = "images/unicorn.jpg"
+  Copyright = "jbfreels"
