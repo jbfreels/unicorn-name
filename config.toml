@@ -1,6 +1,6 @@
-baseurl = "https://itsmejb.xyz/unicorn-name/"
+baseurl = "https://jbfreels.com/unicorn-name/"
 title = "Unicorn Name"
-theme = "jb-nix"
+theme = "hugo-theme-nix"
 languageCode = "en-us"
 
 [menu]
