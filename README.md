@@ -1,4 +1,4 @@
-![Alt text](/static/images/screenshot.png?raw=true "Screenshot")
+![Alt text](/static/images/github-screen.png?raw=true "Screenshot")
 
 # unicorn-name
 What is your unicorn name?

@@ -4,16 +4,44 @@
 <head>
 		<title> {{ .Site.Title }} </title>
 
+		{{ with .Site.BaseURL }}
+		<meta property="og:url"           content="{{.}}" />
+		{{ end }}
+		
+		<meta property="og:type"          content="website" />
+		
+		{{ with .Site.Params.Title }}
+		<meta property="og:title"         content="{{.}}" />
+		{{ end }}
+
+		{{ with .Site.Params.About }}
+		<meta property="og:description"   content="{{.}}" />
+		{{ end }}
+
+		{{ with .Site.Params.Screenshot }}
+		<meta property="og:image"         content="{{.}}" />
+		{{ end }}
 		{{ partial "head.html" . }}
 
 </head>
 
 <body>
+	<!-- Facebook JavaScript SDK -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- Facebook JavaScript SDK END -->
+
 	{{ partial "header.html" . }}
 	<div class="container wrapper">
 		{{ with .Site.Params.ProfilePicture }}
 		<div class="row">
-			<div class="col-sm-3 col-centered">
+			<div class="col-sm-3 col-centered text-center">
 				<img alt="profile-picture" class="img-responsive img-circle user-picture" src="{{.}}">
 			</div>
 		</div>
@@ -35,7 +63,22 @@
 			</div>
 		</div>
 		<div class="row">
+			<div class="col-xs-12 share-facebook text-center">
+				<!-- Facebook button -->
+				<!--<div class="fb-share-button" data-href="https://www.jbfreels.com/unicorn-name/" data-layout="box_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.jbfreels.com%2Funicorn-name%2F&amp;src=sdkpreparse">Share</a></div>
+				-->
+				{{ with .Site.BaseURL }}
+				<div class="fb-share-button" 
+					data-href="{{.}}" 
+					mobile-iframe="true"
+					data-layout="button_count">
+				</div>
+				{{ end }}
+				<!-- Facebook butotn END -->
+			</div>
 			<div class="col-xs-12 user-social text-center">
+
+				
 				{{ with .Site.Params.SlackURL }}
 				<a href="{{.}}" title="Slack"><i class="fa fa-slack fa-3x" aria-hidden="true"></i></a> 
 				{{ end }} 

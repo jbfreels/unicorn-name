@@ -1,6 +1,6 @@
 baseurl = "https://jbfreels.com/unicorn-name/"
-title = "Unicorn Name"
-theme = "hnix"
+title = "What is your unicorn name?"
+theme = "nix"
 languageCode = "en-us"
 
 [menu]
@@ -14,6 +14,7 @@ languageCode = "en-us"
   HeaderUsername = "unicorn-name"
   HeaderHostname = "jbfreels.com"
   Email = "jbfreels@me.com"
-  About = "Enter your name and hit 'Submit'"
+  About = "enter your name and hit 'Submit'"
   ProfilePicture = "images/unicorn.jpg"
+  Screenshot = "https://www.jbfreels.com/unicorn-name/images/screenshot.png"
   Copyright = "jbfreels"
